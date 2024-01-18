@@ -1,11 +1,10 @@
 package dev.android.bruno.appminhaideiadb.model;
 
-import android.util.Log;
+import java.util.List;
 
-import dev.android.bruno.appminhaideiadb.api.AppUtil;
 import dev.android.bruno.appminhaideiadb.controller.iCrud;
 
-public class Cliente implements iCrud {
+public class Cliente implements iCrud<Cliente> {
 
     private int id;
     private String nome;
@@ -36,22 +35,25 @@ public class Cliente implements iCrud {
     }
 
     @Override
-    public void incluir() {
-        Log.i(AppUtil.TAG, "incluir: Cliente nome" +getNome());
+    public boolean incluir(Cliente obj) {
+
+        return false;
     }
 
     @Override
-    public void alterar() {
-        Log.i(AppUtil.TAG, "alterar: Cliente");
+    public boolean alterar(Cliente obj) {
+
+        return false;
     }
 
     @Override
-    public void deletar() {
-        Log.i(AppUtil.TAG, "deletar: Cliente");
+    public void deletar(Cliente obj) {
+
     }
 
     @Override
-    public void listar() {
-        Log.i(AppUtil.TAG, "listar: Clientes");
+    public List<Cliente> listar(Cliente obj) {
+
+        return null;
     }
 }

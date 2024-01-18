@@ -1,11 +1,10 @@
 package dev.android.bruno.appminhaideiadb.model;
 
-import android.util.Log;
+import java.util.List;
 
-import dev.android.bruno.appminhaideiadb.api.AppUtil;
 import dev.android.bruno.appminhaideiadb.controller.iCrud;
 
-public class Produto implements iCrud {
+public class Produto implements iCrud<Produto> {
 
     private String nome;
     private String fornecedor;
@@ -27,21 +26,25 @@ public class Produto implements iCrud {
     }
 
     @Override
-    public void incluir() {
+    public boolean incluir(Produto obj) {
+
+        return false;
+    }
+
+    @Override
+    public boolean alterar(Produto obj) {
+
+        return false;
+    }
+
+    @Override
+    public void deletar(Produto obj) {
 
     }
 
     @Override
-    public void alterar() {
-    }
+    public List<Cliente> listar(Produto obj) {
 
-    @Override
-    public void deletar() {
-        Log.i(AppUtil.TAG, "deletar: Produto");
-    }
-
-    @Override
-    public void listar() {
-        Log.i(AppUtil.TAG, "listar: Produtos");
+        return null;
     }
 }

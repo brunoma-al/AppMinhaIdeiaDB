@@ -1,20 +1,26 @@
 package dev.android.bruno.appminhaideiadb.controller;
 
-public interface iCrud {
+import java.util.List;
+
+import dev.android.bruno.appminhaideiadb.model.Cliente;
+
+public interface iCrud<T> {
 
     // Métodos para persistência de dados no Banco de Dados
 
     // Incluir
-    public void incluir();
+    public boolean incluir(T obj);
 
     // Alterar
-    public void alterar();
+    public boolean alterar(T obj);
 
     // Deletar
-    public void deletar();
+    public void deletar(T obj);
 
     // Listar
-    public void listar();
+    public List<Cliente> listar(T obj);
+
+    List<Cliente> listar();
 
     // CRUD - Create Retrieve Update Delete
 
