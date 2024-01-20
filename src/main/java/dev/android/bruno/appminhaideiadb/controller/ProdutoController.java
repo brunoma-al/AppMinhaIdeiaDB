@@ -4,9 +4,10 @@ import android.content.Context;
 
 import java.util.List;
 
+import dev.android.bruno.appminhaideiadb.datasource.AppDataBase;
 import dev.android.bruno.appminhaideiadb.model.Cliente;
 import dev.android.bruno.appminhaideiadb.model.Produto;
-import professor.marcomaddo.appminhaideiadb.datasource.AppDataBase;
+
 
 public class ProdutoController extends AppDataBase implements iCrud<Produto> {
     public ProdutoController(Context context) {
